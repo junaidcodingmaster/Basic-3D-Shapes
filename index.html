@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic 3D Objects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <style></style>
+  <body>
+    <a-scene>
+      <a-sky color="black"></a-sky>
+
+      <a-camera
+        position="0 10 28"
+        reverse-mouse-drag="true"
+        look-controls
+        camera-reader
+      >
+      </a-camera>
+      <a-plane
+        position="0 0 0"
+        width="70"
+        height="10"
+        rotation="-90 0 0"
+        color="white"
+      ></a-plane>
+      <a-box
+        id="cube"
+        height="5"
+        width="5"
+        depth="5"
+        position="-30 3 0"
+        color="#FF9505"
+      ></a-box>
+
+      <a-sphere
+        id="sphere"
+        position="-20 3 0"
+        height="5"
+        width="5"
+        radius="3"
+        color="#3498DB"
+      ></a-sphere>
+
+      <a-cylinder
+        id="cylinder"
+        position="-10 4 0"
+        height="7"
+        width="5"
+        radius="3"
+        color="#EC368D"
+      ></a-cylinder>
+
+      <a-cone
+        id="cone"
+        color="#E74C3C"
+        radius-bottom="3"
+        position="0 4 0"
+        height="7"
+        width="7"
+      ></a-cone>
+
+      <a-octahedron
+        id="octahedron"
+        position="10 3 0"
+        height="7"
+        width="7"
+        radius="3"
+        color="#9B59B6"
+      ></a-octahedron>
+
+      <a-ring
+        id="ring"
+        color="#F1C40F"
+        position="20 5 0"
+        radius-inner="2"
+        radius-outer="4"
+      ></a-ring>
+
+      <a-icosahedron
+        id="icosahedron"
+        color="#27AE60"
+        position="30 3 0"
+        depth="5"
+        height="7"
+        width="7"
+        radius="3"
+      ></a-icosahedron>
+
+      <a-text
+        value="Basic 3D Shapes"
+        position="-20 20 0"
+        color="white"
+        width="100"
+        font="font/TiltNeon-Regular.fnt"
+        font-image="font/TiltNeon-Regular.png"
+        font-weight="bold"
+        scale="1"
+      ></a-text>
+      <a id="btn" href="https://abujuni.dev" target="_blank">Made By Junaid</a>
+      <button id="btn2" onclick="changeColorOfShapes()">Change Color</button>
+    </a-scene>
+  </body>
+</html>
